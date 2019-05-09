@@ -3,6 +3,14 @@
 
 #include "TankPlayerController.h"
 
+void ATankPlayerController::Tick(float DeltaTime) {
+
+	Super::Tick( DeltaTime );
+
+	//AimTowardsCrosshair();
+
+}
+
 void ATankPlayerController::BeginPlay() {
 
 	Super::BeginPlay(); // This ensures that the parent BeginPlay() function still gets called! (i.e. the class from which this inherits)
