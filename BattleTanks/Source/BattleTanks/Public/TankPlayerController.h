@@ -27,10 +27,14 @@ private:
 	void AimTowardsCrosshair();
 	bool GetSightRayHitLocation(FVector&) const;
 	bool GetWorldDirection(FVector2D ScreenLocation, FVector& WorldDirection) const;
+	bool GetLookVectorHitLocation(FVector& HitLocation, FVector WorldDirection) const;
 
 	UPROPERTY(EditAnywhere)
 	float m_CrossHairXLocation;
 	UPROPERTY(EditAnywhere)
 	float m_CrossHairYLocation;
+
+	//UPROPERTY(BlueprintAssignable)
+	float m_LineTraceRange;
 	
 };
