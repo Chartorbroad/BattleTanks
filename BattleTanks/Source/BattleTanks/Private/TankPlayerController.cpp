@@ -65,7 +65,6 @@ bool ATankPlayerController::GetSightRayHitLocation(FVector& HitLocation) const {
 	}
 
 	// Line-trace along that direction
-	
 	// See what we hit (up to a maximum range)
 
 	return true;
@@ -76,10 +75,6 @@ bool ATankPlayerController::GetSightRayHitLocation(FVector& HitLocation) const {
 bool ATankerPlayerController::GetLookDirection(FVector2D ScreenLocation, FVector& WorldDirection) const {
 
 	FVector CameraWorldLocation; // gets discarded as we don't use it
-	if (DeprojectScreenPositionToWorld(ScreenLocation.X, ScreenLocation.Y, CameraWorldLocation, WorldDirection)) {
-		return true;
-	}
-
-	return false;
+	return (DeprojectScreenPositionToWorld(ScreenLocation.X, ScreenLocation.Y, CameraWorldLocation, WorldDirection));
 
 }
